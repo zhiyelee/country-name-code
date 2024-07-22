@@ -1,7 +1,7 @@
 {
-  "name": "country-list",
-  "version": "2.3.0",
-  "description": "Maps ISO 3166-1-alpha-2 codes to English country names and vice versa.",
+  "name": "country-name-code",
+  "version": "1.0.0",
+  "description": "Maps ISO 3166-1-alpha-2 codes to English country names and vice versa, plus short country names.",
   "main": "country-list.js",
   "files": [
     "data.json"
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fannarsh/country-list.git"
+    "url": "git://github.com/zhiyelee/country-name-code.git"
   },
   "keywords": [
     "country",
@@ -25,8 +25,8 @@
     "ISO 3166-1-alpha-2",
     "ISO 3166-1"
   ],
-  "author": "Fannar Snær <fannar@lambagras.is>",
   "contributors": [
+    "Fannar Snær <fannar@lambagras.is>",
     "Eiríkur Heiðar Nilsson <eirikur@nilsson.is>",
     "intpp at newageio",
     "Jonathan Plugaru <jplugaru@hotmail.fr>",

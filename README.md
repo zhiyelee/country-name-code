@@ -14,14 +14,15 @@ You can find version 1.* of country-list [here](https://github.com/fannarsh/coun
 ## Example
 
 ``` js
-const { getCode, getName } = require('country-list');
+const { getCode, getName, getShortName } = require('country-list');
 
-console.log(getName('IS')); // Iceland
-console.log(getCode('Iceland')); // IS
+console.log(getName('GB')); // United Kingdom of Great Britain and Northern Ireland
+console.log(getShortName('GB')); // United Kingdom
+console.log(getCode('United Kingdom of Great Britain and Northern Ireland')); // GB
 console.log(getCode('Nowhere-to-be-found-land')); // undefined
 ```
 
-And how to change the name of a country 
+And how to change the name of a country
 ``` js
 const { overwrite, getName } = require('country-list');
 overwrite([{
@@ -53,15 +54,15 @@ Expects an array of country objects containing `code` and `name` properties.
 
 ### getName(code)
 
-Expects a two-digit country code.  
-Returns the name for that country.  
-If not found, it returns `undefined`.  
+Expects a two-digit country code.
+Returns the name for that country.
+If not found, it returns `undefined`.
 
 ### getCode(name)
 
-Expects the English country name.  
-Returns the code for that country.  
-If not found, it returns `undefined`.  
+Expects the English country name.
+Returns the code for that country.
+If not found, it returns `undefined`.
 
 ### getNames()
 

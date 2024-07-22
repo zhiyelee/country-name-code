@@ -5,11 +5,13 @@ var data = require('./data.json')
 /** Precompute name and code lookups. */
 var nameMap = {}
 var codeMap = {}
+var codeShortNameMap = {}
 data.forEach(mapCodeAndName)
 
 function mapCodeAndName (country) {
   nameMap[country.name.toLowerCase()] = country.code
   codeMap[country.code.toLowerCase()] = country.name
+  codeShortNameMap[country.code.toLowerCase()] = country.shortName || country.name
 }
 
 exports.overwrite = function overwrite (countries) {
@@ -31,9 +33,19 @@ exports.getName = function getName (code) {
   return codeMap[code.toLowerCase()]
 }
 
+exports.getShortName = function getShortName (code) {
+  return codeShortNameMap[code.toLowerCase()]
+}
+
 exports.getNames = function getNames () {
   return data.map(function (country) {
     return country.name
+  })
+}
+
+exports.getShortNames = function getShortNames () {
+  return data.map(function (country) {
+    return country.shortName || country.name
   })
 }
 
