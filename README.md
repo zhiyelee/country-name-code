@@ -58,6 +58,12 @@ Expects a two-digit country code.
 Returns the name for that country.
 If not found, it returns `undefined`.
 
+### getShortName(code)
+
+Expects a two-digit country code.
+Returns the short name for that country or the country name if short name is not defined in the `data.json`. For example, the short name for `United Kingdom of Great Britain and Northern Ireland` is `United Kingdom`.
+If not found, it returns `undefined`.
+
 ### getCode(name)
 
 Expects the English country name.
